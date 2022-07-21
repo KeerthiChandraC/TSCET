@@ -393,8 +393,8 @@ def get_Roll_Rank(driver):
                 while True:
                     
                     layout = [ [sg.Text(f'{warn}',auto_size_text= True, font=('Helvetica', 42))], 
-                            [sg.Text(f'Please enter your {CET_NAME[key-1]} Hall Ticket Number:',auto_size_text= True, font=('Helvetica', 35))], 
-                            [sg.Text(f'{CET_NAME[key-1]} Hall Ticket:',auto_size_text= True, font=('Helvetica', 42)), sg.InputText(font=('Helvetica', 42))],
+                            [sg.Text(f'Please enter your',auto_size_text= True, font=('Helvetica', 35))], 
+                            [sg.Text(f'{CET_NAME[key-1]} Hall Ticket Number: ',auto_size_text= True, font=('Helvetica', 42)), sg.InputText(font=('Helvetica', 42))],
                             [sg.Text(f'Press ENTER Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
                             [sg.Submit(font=('Helvetica', 42))] 
                     ]
@@ -427,8 +427,8 @@ def get_Roll_Rank(driver):
                     else:
                             ty =""
                     layout = [ [sg.Text(f'{warn}',auto_size_text= True, font=('Helvetica', 42))], 
-                                [sg.Text(f'Please enter your {CET_NAME[key-1]}{ty} Rank:',auto_size_text= True, font=('Helvetica', 35))], 
-                                [sg.Text(f'{CET_NAME[key-1]}{ty} RANK:',auto_size_text= True, font=('Helvetica', 42)), sg.InputText(font=('Helvetica', 42))],
+                                [sg.Text(f'Please enter your',auto_size_text= True, font=('Helvetica', 35))], 
+                                [sg.Text(f'{CET_NAME[key-1]}{ty} RANK: ',auto_size_text= True, font=('Helvetica', 42)), sg.InputText(font=('Helvetica', 42))],
                                 [sg.Text(f'Press ENTER Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
                                 [sg.Submit(font=('Helvetica', 42))]] 
                     window = sg.Window('CET REG data entry window', layout,keep_on_top=True).Finalize()
@@ -633,7 +633,7 @@ def reg(TOTAL,driver):
                 button.click()
                 driver.execute_script("document.body.style.zoom='150%'")
                 ROLL,RANK,name_dsip,fath_dsip,aci_done,dip_result = get_Roll_Rank(driver)
-                print('H.No. :{0}   Rank : {1}'.format(ROLL,RANK))
+                print('H.No.: {0}   Rank : {1}'.format(ROLL,RANK))
                 if aci_done:
                         name_dsip = ''
                         return TOTAL,ROLL,RANK,name_dsip
@@ -858,7 +858,7 @@ def reg(TOTAL,driver):
                                                                 [sg.Text(f' Go to',auto_size_text= True, font=('Helvetica', 55))],
                                                                 #[sg.Text(f' Verification',auto_size_text= True, font=('Helvetica', 60))],
                                                                 
-                                                                [sg.Text(f' Counter NO-{((TOTAL+1)%VerOff_num)+1}' if CET_NAME[key-1] !=   "ICET" else '' ,auto_size_text= True, font=('Helvetica', 70))],
+                                                                [sg.Text(f' Counter-{((TOTAL+1)%VerOff_num)+1}' if CET_NAME[key-1] !=   "ICET" else '' ,auto_size_text= True, font=('Helvetica', 75))],
                                                                 [sg.Text(f' and Sit. We will call again!',auto_size_text= True, font=('Helvetica', 40))],
                                                                 [sg.Text(f' Do Not Press Any Button!',auto_size_text= True, font=('Helvetica', 60))],
                                                                 #[sg.Text('   \u2794',auto_size_text= True, font=('Helvetica', 200))]]
