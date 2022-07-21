@@ -810,7 +810,7 @@ def reg(TOTAL,driver):
                                                 #box.click()
                                                 box = driver.wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="ctl00_ContentPlaceHolder1_sscpassdmth"]')))
                                                 box.clear()
-                                                box.send_keys("05")
+                                                box.send_keys("04")
                                                 
                                                 
                                                 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
@@ -841,7 +841,7 @@ def reg(TOTAL,driver):
                                                                 [sg.Text(f' NAME:{name_dsip} ',auto_size_text= True, font=('Helvetica', 42))],
                                                                 [sg.Text(f' Father NAME: {fath_dsip}',auto_size_text= True, font=('Helvetica', 42))],
                                                                 [sg.Text(f' Mobile:{mo} ',auto_size_text= True, font=('Helvetica', 42))],
-                                                                [sg.Text(f'Press ENTER Button to Confirm',auto_size_text= True, font=('Helvetica', 42))], 
+                                                                [sg.Text(f'Press ENTER Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
                                                                 [sg.Submit(font=('Helvetica', 42))]] 
                                                     window = sg.Window('CET REG data entry window', layout,keep_on_top=True).Finalize()
                                                     window.Maximize()
@@ -853,13 +853,14 @@ def reg(TOTAL,driver):
 
                                                 print("Saved Sucessfully")
                                                 layout = [   
-                                                                [sg.Text(f' Registered Sucessfully! ',auto_size_text= True, font=('Helvetica', 27))],
+                                                                #[sg.Text(f' Registered Sucessfully! ',auto_size_text= True, font=('Helvetica', 27))],
                                                                 #[sg.Text(f' GO to Verification Block',auto_size_text= True, font=('Helvetica', 45))],
                                                                 [sg.Text(f' Go to',auto_size_text= True, font=('Helvetica', 55))],
-                                                                [sg.Text(f' Verification',auto_size_text= True, font=('Helvetica', 60))],
+                                                                #[sg.Text(f' Verification',auto_size_text= True, font=('Helvetica', 60))],
                                                                 
-                                                                [sg.Text(f' Officer NO-{((TOTAL+1)%VerOff_num)+1}' if CET_NAME[key-1] !=   "ICET" else '' ,auto_size_text= True, font=('Helvetica', 65))],
+                                                                [sg.Text(f' Counter NO-{((TOTAL+1)%VerOff_num)+1}' if CET_NAME[key-1] !=   "ICET" else '' ,auto_size_text= True, font=('Helvetica', 65))],
                                                                 [sg.Text(f' and Sit. We will call again!',auto_size_text= True, font=('Helvetica', 40))],
+                                                                [sg.Text(f' Do Not Press Any Button!',auto_size_text= True, font=('Helvetica', 60))],
                                                                 #[sg.Text('   \u2794',auto_size_text= True, font=('Helvetica', 200))]]
                                                                 [sg.Text('   \u2190',auto_size_text= True, font=('Helvetica', 200))]] 
                                                 window = sg.Window('CET REG data entry window', layout,keep_on_top=True).Finalize()
