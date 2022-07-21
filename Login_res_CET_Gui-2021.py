@@ -710,7 +710,7 @@ def reg(TOTAL,driver):
                                                                [sg.Text(f' NAME:{name_dsip} ',auto_size_text= True, font=('Helvetica', 42))],
                                                                 #[sg.Text(f' Father NAME: {fath_dsip}',auto_size_text= True, font=('Helvetica', 42))],
                                                                [sg.Text(' Mobile: ',auto_size_text= True, font=('Helvetica', 42)), sg.InputText(f'{mo}',font=('Helvetica', 42))],
-                                                               [sg.Text(f'Press ENTER Button to Confirm',auto_size_text= True, font=('Helvetica', 42))], 
+                                                               [sg.Text(f'Press ENTER Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
 	                                                       [sg.Submit(font=('Helvetica', 42))]] 
                                                     window = sg.Window('CET REG data entry window', layout,keep_on_top=True).Finalize()
                                                     window.Maximize()
