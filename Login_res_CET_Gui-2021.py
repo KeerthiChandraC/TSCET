@@ -420,7 +420,7 @@ def get_Roll_Rank(driver):
                 while True:
                     
                     if CET_NAME[key-1] ==   "POLYCET":
-                            ty = " ENGG. "
+                            ty = " ENGINEERING "
                     elif CET_NAME[key-1] ==   "ECET":
                             ty = " BRANCH "
                   
@@ -858,7 +858,7 @@ def reg(TOTAL,driver):
                                                                 [sg.Text(f' Go to',auto_size_text= True, font=('Helvetica', 55))],
                                                                 #[sg.Text(f' Verification',auto_size_text= True, font=('Helvetica', 60))],
                                                                 
-                                                                [sg.Text(f' Counter NO-{((TOTAL+1)%VerOff_num)+1}' if CET_NAME[key-1] !=   "ICET" else '' ,auto_size_text= True, font=('Helvetica', 65))],
+                                                                [sg.Text(f' Counter NO-{((TOTAL+1)%VerOff_num)+1}' if CET_NAME[key-1] !=   "ICET" else '' ,auto_size_text= True, font=('Helvetica', 70))],
                                                                 [sg.Text(f' and Sit. We will call again!',auto_size_text= True, font=('Helvetica', 40))],
                                                                 [sg.Text(f' Do Not Press Any Button!',auto_size_text= True, font=('Helvetica', 60))],
                                                                 #[sg.Text('   \u2794',auto_size_text= True, font=('Helvetica', 200))]]
@@ -877,7 +877,7 @@ def reg(TOTAL,driver):
                                                 TOTAL +=1
                                                 
                                                 print_Form(driver,ROLL,RANK,TOTAL,dip_result)
-                                                #time.sleep(2)
+                                                time.sleep(1)
                                                 window.close()
                                                 break
                                         except Exception as e:
@@ -897,7 +897,7 @@ def reg(TOTAL,driver):
 
                         except Exception as e:
                                 print(e.message)
-                                print('H.No. :{0}   Rank : {1}'.format(ROLL,RANK))
+                                print('H.No.: {0}   Rank : {1}'.format(ROLL,RANK))
                 return TOTAL,ROLL,RANK,name_dsip
                         
 def ver(TOTAL,driver):
