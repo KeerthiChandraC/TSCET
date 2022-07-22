@@ -420,7 +420,7 @@ def get_Roll_Rank(driver):
                 while True:
                     
                     if CET_NAME[key-1] ==   "POLYCET":
-                            ty = " ENGINEERING"
+                            ty = " ENGINEERING(M.P.C)"
                     elif CET_NAME[key-1] ==   "ECET":
                             ty = " BRANCH"
                   
@@ -624,14 +624,20 @@ def print_Form(driver,roll , rank,TOTAL,dip_result):
         #sheet.cell(row=rowNo, column=3).value = mob
 
 def reg(TOTAL,driver):
-                print("Opening ACI Registration.....")        
-                actions = ActionChains(driver)
+                print("Opening ACI Registration.....")
                 menu = driver.wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="ctl00_menuBarn1"]/table/tbody/tr/td[1]/a')))
+                layout = [ [sg.Text('Please Wait.....',auto_size_text= True, font=('Helvetica', 42))]] 
+                window = sg.Window('CET REG data entry window', layout,keep_on_top=True).Finalize()
+                window.Maximize()
+                dum_event, dum_values = window.Read(timeout=0)
+                actions = ActionChains(driver)
+                
                 actions.move_to_element(menu).perform()
 
                 button = driver.wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="ctl00_menuBarn4"]/td/table/tbody/tr/td/a')))
                 button.click()
                 driver.execute_script("document.body.style.zoom='150%'")
+                window.close()
                 ROLL,RANK,name_dsip,fath_dsip,aci_done,dip_result = get_Roll_Rank(driver)
                 print('H.No.: {0}   Rank : {1}'.format(ROLL,RANK))
                 if aci_done:
