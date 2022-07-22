@@ -128,7 +128,7 @@ if LOGIN_NAME[l] == 'R':
                 except:
                         print("wrong Number entered try again")
 SSC_LEN = len("2118117165")
-CBSE_LEN = len("1234567")
+CBSE_LEN = len("20158163")
 MAHA_LEN = len("J151930")
 MOBILE_LEN = len("9963459392")
 
