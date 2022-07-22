@@ -420,9 +420,9 @@ def get_Roll_Rank(driver):
                 while True:
                     
                     if CET_NAME[key-1] ==   "POLYCET":
-                            ty = " ENGINEERING "
+                            ty = " ENGINEERING"
                     elif CET_NAME[key-1] ==   "ECET":
-                            ty = " BRANCH "
+                            ty = " BRANCH"
                   
                     else:
                             ty =""
