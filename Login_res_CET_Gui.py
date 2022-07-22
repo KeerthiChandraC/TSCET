@@ -861,14 +861,15 @@ def reg(TOTAL,driver):
                                                 layout = [   
                                                                 #[sg.Text(f' Registered Sucessfully! ',auto_size_text= True, font=('Helvetica', 27))],
                                                                 #[sg.Text(f' GO to Verification Block',auto_size_text= True, font=('Helvetica', 45))],
-                                                                [sg.Text(f' Go to',auto_size_text= True, font=('Helvetica', 55))],
+                                                                [sg.Text(f' Go to VERIFICATION',auto_size_text= True, font=('Helvetica', 55))],
                                                                 #[sg.Text(f' Verification',auto_size_text= True, font=('Helvetica', 60))],
                                                                 
                                                                 [sg.Text(f' Counter-{((TOTAL+1)%VerOff_num)+1}' if CET_NAME[key-1] !=   "ICET" else '' ,auto_size_text= True, font=('Helvetica', 75))],
+                                                                [sg.Text('   \u2190',auto_size_text= True, font=('Helvetica', 200))]] 
                                                                 [sg.Text(f' and Sit. We will call again!',auto_size_text= True, font=('Helvetica', 40))],
                                                                 [sg.Text(f' Do Not Press Any Button!',auto_size_text= True, font=('Helvetica', 60))],
                                                                 #[sg.Text('   \u2794',auto_size_text= True, font=('Helvetica', 200))]]
-                                                                [sg.Text('   \u2190',auto_size_text= True, font=('Helvetica', 200))]] 
+                                                                
                                                 window = sg.Window('CET REG data entry window', layout,keep_on_top=True).Finalize()
                                                 window.Maximize()
                                                 dum_event, dum_values = window.Read(timeout=0)
