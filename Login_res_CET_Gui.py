@@ -344,8 +344,8 @@ def get_Roll_Rank(driver):
         fath_dsip="ACIDONE"
         aci_done = False
         layout = [   
-                                                                [sg.Text(f' Welcome to  Registration ',auto_size_text= True, font=('Helvetica', 50))],
-                                                                [sg.Text(f'Press ENTER Button to Start',auto_size_text= True, font=('Helvetica', 42))],
+                                                                #[sg.Text(f' Welcome to  Registration ',auto_size_text= True, font=('Helvetica', 50))],
+                                                                [sg.Text(f'Press ENTER Button to Start',auto_size_text= True, font=('Helvetica', 75))],
                                                                 [sg.Submit(font=('Helvetica', 42))]] 
         window = sg.Window('CET REG data entry window', layout,keep_on_top=True).Finalize()
         window.Maximize()
