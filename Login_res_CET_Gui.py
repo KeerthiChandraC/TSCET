@@ -345,7 +345,7 @@ def get_Roll_Rank(driver):
         aci_done = False
         layout = [   
                                                                 #[sg.Text(f' Welcome to  Registration ',auto_size_text= True, font=('Helvetica', 50))],
-                                                                [sg.Text(f'Press ENTER Button to Start',auto_size_text= True, font=('Helvetica', 75))],
+                                                                [sg.Text(f'Press ENTER(\u21B5) Button to Start',auto_size_text= True, font=('Helvetica', 70))],
                                                                 [sg.Submit(font=('Helvetica', 42))]] 
         window = sg.Window('CET REG data entry window', layout,keep_on_top=True).Finalize()
         window.Maximize()
@@ -362,7 +362,7 @@ def get_Roll_Rank(driver):
                             layout = [ [sg.Text(f'{warn}',auto_size_text= True, font=('Helvetica', 42))], 
                             [sg.Text(f'Please enter your DIPLOMA PIN Number:',auto_size_text= True, font=('Helvetica', 35))], 
                             [sg.Text(f'DIPLOMA PIN Number:',auto_size_text= True, font=('Helvetica', 42)), sg.InputText(font=('Helvetica', 42))],
-                            [sg.Text(f'Press ENTER Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
+                            [sg.Text(f'Press ENTER(\u21B5) Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
                             [sg.Submit(font=('Helvetica', 42))] 
                             ]
                             window.close()
@@ -395,7 +395,7 @@ def get_Roll_Rank(driver):
                     layout = [ [sg.Text(f'{warn}',auto_size_text= True, font=('Helvetica', 42))], 
                             [sg.Text(f'Please enter your',auto_size_text= True, font=('Helvetica', 35))], 
                             [sg.Text(f'{CET_NAME[key-1]} Hall Ticket Number: ',auto_size_text= True, font=('Helvetica', 42)), sg.InputText(font=('Helvetica', 42))],
-                            [sg.Text(f'Press ENTER Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
+                            [sg.Text(f'Press ENTER(\u21B5) Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
                             [sg.Submit(font=('Helvetica', 42))] 
                     ]
                     window.close()
@@ -429,7 +429,7 @@ def get_Roll_Rank(driver):
                     layout = [ [sg.Text(f'{warn}',auto_size_text= True, font=('Helvetica', 42))], 
                                 [sg.Text(f'Please enter your',auto_size_text= True, font=('Helvetica', 35))], 
                                 [sg.Text(f'{CET_NAME[key-1]}{ty} RANK: ',auto_size_text= True, font=('Helvetica', 42)), sg.InputText(font=('Helvetica', 42))],
-                                [sg.Text(f'Press ENTER Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
+                                [sg.Text(f'Press ENTER(\u21B5) Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
                                 [sg.Submit(font=('Helvetica', 42))]] 
                     window = sg.Window('CET REG data entry window', layout,keep_on_top=True).Finalize()
                     window.Maximize()
@@ -675,7 +675,7 @@ def reg(TOTAL,driver):
                                                                        [sg.Text(f' NAME:{name_dsip} ',auto_size_text= True, font=('Helvetica', 42))],
                                                                         #[sg.Text(f' Father NAME: {fath_dsip}',auto_size_text= True, font=('Helvetica', 42))],
                                                                        [sg.Text(' SSC/CBSE HallTicket Number: ',auto_size_text= True, font=('Helvetica', 42)), sg.InputText(f'{ssc_htno}',font=('Helvetica', 42))],
-                                                                       [sg.Text(f'Press ENTER Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
+                                                                       [sg.Text(f'Press ENTER(\u21B5) Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
                                                                        [sg.Submit(font=('Helvetica', 42))]] 
                                                             window = sg.Window('CET REG data entry window', layout,keep_on_top=True).Finalize()
                                                             window.Maximize()
@@ -716,7 +716,7 @@ def reg(TOTAL,driver):
                                                                [sg.Text(f' NAME:{name_dsip} ',auto_size_text= True, font=('Helvetica', 42))],
                                                                 #[sg.Text(f' Father NAME: {fath_dsip}',auto_size_text= True, font=('Helvetica', 42))],
                                                                [sg.Text(' Mobile: ',auto_size_text= True, font=('Helvetica', 42)), sg.InputText(f'{mo}',font=('Helvetica', 42))],
-                                                               [sg.Text(f'Press ENTER Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
+                                                               [sg.Text(f'Press ENTER(\u21B5) Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
 	                                                       [sg.Submit(font=('Helvetica', 42))]] 
                                                     window = sg.Window('CET REG data entry window', layout,keep_on_top=True).Finalize()
                                                     window.Maximize()
@@ -847,7 +847,7 @@ def reg(TOTAL,driver):
                                                                 [sg.Text(f' NAME:{name_dsip} ',auto_size_text= True, font=('Helvetica', 42))],
                                                                 [sg.Text(f' Father NAME: {fath_dsip}',auto_size_text= True, font=('Helvetica', 42))],
                                                                 [sg.Text(f' Mobile:{mo} ',auto_size_text= True, font=('Helvetica', 42))],
-                                                                [sg.Text(f'Press ENTER Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
+                                                                [sg.Text(f'Press ENTER(\u21B5) Button to Submit',auto_size_text= True, font=('Helvetica', 42))], 
                                                                 [sg.Submit(font=('Helvetica', 42))]] 
                                                     window = sg.Window('CET REG data entry window', layout,keep_on_top=True).Finalize()
                                                     window.Maximize()
@@ -861,12 +861,13 @@ def reg(TOTAL,driver):
                                                 layout = [   
                                                                 #[sg.Text(f' Registered Sucessfully! ',auto_size_text= True, font=('Helvetica', 27))],
                                                                 #[sg.Text(f' GO to Verification Block',auto_size_text= True, font=('Helvetica', 45))],
-                                                                [sg.Text(f' Go to VERIFICATION',auto_size_text= True, font=('Helvetica', 55))],
+                                                                [sg.Text(f' Go to',auto_size_text= True, font=('Helvetica', 55))],
                                                                 #[sg.Text(f' Verification',auto_size_text= True, font=('Helvetica', 60))],
                                                                 
-                                                                [sg.Text(f' Counter-{((TOTAL+1)%VerOff_num)+1}' if CET_NAME[key-1] !=   "ICET" else '' ,auto_size_text= True, font=('Helvetica', 75))],
-                                                                [sg.Text(' \u2190',auto_size_text= True, font=('Helvetica', 100))],
+                                                                [sg.Text(f' Counter-{((TOTAL+1)%VerOff_num)+1}' if CET_NAME[key-1] !=   "ICET" else 'VERIFICATION Counters' ,auto_size_text= True, font=('Helvetica', 75))],
+                                                                
                                                                 [sg.Text(f' and Sit. We will call again!',auto_size_text= True, font=('Helvetica', 40))],
+                                                                [sg.Text(' \u2190 \u2190 \u2190',auto_size_text= True, font=('Helvetica', 100))],
                                                                 [sg.Text(f' Do Not Press Any Button!',auto_size_text= True, font=('Helvetica', 60))]]
                                                                 #[sg.Text('   \u2794',auto_size_text= True, font=('Helvetica', 200))]]
                                                                 
