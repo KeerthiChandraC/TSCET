@@ -28,7 +28,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import Select
-from webdriver_manager.chrome import ChromeDriverManager
 
 
 
@@ -309,7 +308,7 @@ def init_driver():
                 chrome_profile.add_argument('--start-maximized')
                 chrome_profile.add_argument('--disable-infobars')
                 print('Opening {0} Browser........'.format(BROWSER_NAME))
-                driver = webdriver.Chrome(service =Service(ChromeDriverManager().install()),options=chrome_profile)
+                driver = webdriver.Chrome(service =Service(),options=chrome_profile)
                 #driver = webdriver.Firefox()
         if BROWSER_NAME == 'FIREFOX':
                 print('Opening {0} Browser........'.format(BROWSER_NAME))
